@@ -1,13 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
-}
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return 
-}
+  runApp(
+    MaterialApp(
+      title: 'my first flutter app',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Dashboard'.toUpperCase()),
+        ),
+        body: Center(
+          child: Text.rich(TextSpan(
+            text: 'my',
+            children: [
+              TextSpan(
+                  text: 'flutter',
+                  style: TextStyle(
+                      fontSize: 50.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepOrange)),
+              TextSpan(
+                  text: 'World',
+                  style: TextStyle(
+                      fontSize: 50.0,
+                      fontStyle: FontStyle.italic,
+                      color: Color(0xFF1AA599))),
+            ],
+          )),
+        ),
+      ),
+    ),
+  );
 }
